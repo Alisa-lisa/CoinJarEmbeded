@@ -1,0 +1,2 @@
+# CoinJarEmbeded
+CoinJarEmbeded
