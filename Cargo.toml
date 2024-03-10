@@ -32,6 +32,7 @@ esp-idf-hal = "0.43.1"
 mipidsi = "0.7.1"
 anyhow = "1.0.80"
 embedded-graphics = "0.8.1"
+tokio = { version = "1.36.0", features = ["rt", "macros", "time", "sync"] }
 
 [build-dependencies]
 embuild = "0.31.3"
