@@ -20,6 +20,12 @@ toolchain:
 clean:
     espup uninstall
 
+build *args:
+    #!/usr/bin/env bash
+    set -euxo pipefail
+    set -o allexport; source export-esp-rust.sh; set +o allexport
+    cargo espflash build
+
 flash *args:
     #!/usr/bin/env bash
     set -euxo pipefail
