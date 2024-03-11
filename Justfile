@@ -22,12 +22,12 @@ clean:
 
 build *args:
     #!/usr/bin/env bash
-    set -euxo pipefail
+    set -euo pipefail
     set -o allexport; source export-esp-rust.sh; set +o allexport
-    cargo espflash build
+    cargo build
 
 flash *args:
     #!/usr/bin/env bash
-    set -euxo pipefail
+    set -euo pipefail
     set -o allexport; source export-esp-rust.sh; set +o allexport
     cargo espflash flash --monitor {{ args }}
